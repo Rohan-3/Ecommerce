@@ -1,1 +1,13 @@
-
+.Nav{
+    display: flex;
+    background-color: rgb(242, 242, 172);
+  }
+  
+  .Nav-left
+  {
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 15px;
+    margin-left: 850px;
+    
+  }
