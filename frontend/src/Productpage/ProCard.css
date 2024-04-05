@@ -1,0 +1,21 @@
+.Procard
+{
+    
+    height: 390px;
+    width:230px;
+    border:1px solid white ;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px -6px 29px -15px rgba(0,0,0,0.75);
+
+}
+
+.Procard:hover{
+   
+
+    border:1px solid black ;
+    box-shadow: 2px -6px 29px -12px rgba(0,0,0,0.75);
+}
+

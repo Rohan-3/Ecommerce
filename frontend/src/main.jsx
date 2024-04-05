@@ -5,10 +5,12 @@ import './index.css'
 import SuperAdminMenu from './superAdmin/DashBoard/SuperAdminMenu.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-   <App/>
+  <App/>
    </BrowserRouter>
   </React.StrictMode>,
 )

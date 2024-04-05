@@ -7,11 +7,10 @@ function App() {
   return (
     <>
 
-      <p className="text-red-500">
+      <div>
         <NavBar/>
         <NavRoutes/>
-        Click on the Vite and React logos to learn more
-      </p>
+      </div>
     </>
   )
 }

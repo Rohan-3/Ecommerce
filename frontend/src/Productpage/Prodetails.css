@@ -1,0 +1,126 @@
+.prodetail-container
+{
+  margin: 7px;
+  display: flex;
+}
+
+
+.prodetail-info
+{
+  margin-top: 50px;
+  margin-left: 300px;
+}
+
+.custom-slider {
+    margin: 20px;
+    position: relative;
+  }
+  
+  .custom-slider .slick-dots {
+    position: absolute;
+    bottom: -30px; /* Adjust this value as needed */
+    left: -100px;
+    right: 0;
+    margin: auto;
+  }
+
+  .slider-container {
+    
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 120px;
+    width: 500px;
+    margin: 40px;
+    box-shadow: 10px 10px 30px -14px rgba(0,0,0,0.75);
+  }
+
+.brand,.desc
+{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 24px;
+letter-spacing: -0.4px;
+word-spacing: 0.4px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.pr
+{
+font-family: "Times New Roman", Times, serif;
+font-size: 17px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #373538;
+font-weight: 400;
+}
+
+.img
+{
+  border: green;
+  box-shadow: 10px 10px 30px -14px rgba(0,0,0,0.75);
+}
+
+
+  .Prodetail-quantity
+  {
+    margin: 20px;
+  }
+
+  /* --------Description------ */
+ 
+  /* Style the dropdown container */
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+
+.dropdown-header {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  
+  width: 300px;
+  background-color: #50394c;
+  color:white;
+  padding: 10px;
+  border: 1px solid #50394c;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+.dropdown-content {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  position: absolute;
+  background-color: #e6e2d3;
+  width: 300px; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 10px;
+}
+/* ----------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+.btn
+{
+  height: 40px;
+  width: 150px;
+  border: 2px solid black;
+  padding: 3px;
+  margin-left: 15px;
+}
+
+
