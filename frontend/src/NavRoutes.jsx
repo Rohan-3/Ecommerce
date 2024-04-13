@@ -6,6 +6,8 @@ import Kids from "./Navcomponents/Kids";
 import About from "./Navcomponents/About";
 import Contact from "./Navcomponents/Contact";
 import Prodetails from "./Productpage/Prodetails";
+import Register from "./pages/auth/Register";
+import Login from "./pages/auth/Login";
 
 const NavRoutes=()=>
 {
@@ -24,6 +26,8 @@ return(<div>
        <Route  path="/about"  element={<About/>}  />
        <Route  path="/contact"  element={<Contact/>}  />
        <Route path="/product/:id" element={<Prodetails/>}/>
+       <Route  path="/register"  element={<Register/>}  />
+       <Route  path="/login"  element={<Login/>}  />
 
 
     </Routes>
