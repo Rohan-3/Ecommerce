@@ -5,11 +5,13 @@ const app = express();
 
 const route = require('./routes/routes.js');
 const userRouter =  require('./routes/UserRoutes.js')
+// const route1= require("./routes/CartRoutes.js")
 
 app.use(express.json());
 
 app.use(route);
 app.use('/auth',userRouter)
+// app.use(route1);
 
 var corsOptions = {
   origin: 'http://127.0.0.1:5173',
@@ -19,7 +21,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 
-const PORT = 2000;
+const PORT = 5000;
 app.listen(PORT, (e) => {
   if (!e) {
     console.log(`Server running on ${PORT}`);

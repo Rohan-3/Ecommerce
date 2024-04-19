@@ -8,6 +8,7 @@ import Contact from "./Navcomponents/Contact";
 import Prodetails from "./Productpage/Prodetails";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import Auth from "./Navcomponents/Auth";
 
 const NavRoutes=()=>
 {
@@ -28,6 +29,7 @@ return(<div>
        <Route path="/product/:id" element={<Prodetails/>}/>
        <Route  path="/register"  element={<Register/>}  />
        <Route  path="/login"  element={<Login/>}  />
+       <Route path="/auth" element={<Auth/>} />
 
 
     </Routes>

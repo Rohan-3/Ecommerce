@@ -8,7 +8,7 @@ const Prohome = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:2000/getData`)
+      .get(`http://localhost:5000/getData`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);
@@ -24,9 +24,7 @@ const Prohome = () => {
         <div>
           <div
             style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
+              display: 'grid', gridTemplateColumns: 'repeat(3,300px)', justifyContent: 'space-evenly'
             }}
           >
             {products.map((temp) => (

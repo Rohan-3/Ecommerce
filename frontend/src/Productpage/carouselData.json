@@ -1,0 +1,16 @@
+{
+    "slides": [
+      {
+        "src": "https://img.freepik.com/free-psd/luxury-men-s-fashion-facebook-template_23-2150871396.jpg?w=1380&t=st=1713436645~exp=1713437245~hmac=e2c1bbb7365f6c342a26406b7fe8f6d377f4e65409f32fa7c491cfb6fbdfcebb",
+        "alt": "Image 1 for carousel"
+      },
+      {
+        "src": "https://img.freepik.com/free-psd/new-feminity-fashion-landing-page-template_23-2149004074.jpg?w=1380&t=st=1713436731~exp=1713437331~hmac=aff5cd6cee84cce8462d429f8aef656404d73b6e1ca80d512f6e230a425afb12",
+        "alt": "Image 2 for carousel"
+      },
+      {
+        "src": "https://img.freepik.com/free-psd/modern-asymmetry-landing-page-design_23-2148611471.jpg?w=1380&t=st=1713436930~exp=1713437530~hmac=f73457509e7f32efdedcac5da24091ca6aec12dc6464f1c57c7a7010ec5b6170",
+        "alt": "Image 3 for carousel"
+      }
+    ]
+}

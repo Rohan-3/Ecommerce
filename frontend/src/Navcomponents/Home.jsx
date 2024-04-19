@@ -1,12 +1,16 @@
+import { Carousel } from "../Productpage/Carousel";
 import Prohome from "../Productpage/Prohome";
+import { slides } from "../Productpage/carouselData.json";
 const Home=()=>
 {
-    return(<div>
- <div className="Start" style={{height:"300px",width:"100%",textAlign:"center",padding:"150px",fontSize:"40px"}}>
-    <h1 style={{fontWeight:"900",}}>Home</h1>
-</div>
-    <Prohome/>
-
+    return(
+    <div>
+        <div className="Carousel">
+                <Carousel data={slides} />
+        </div>
+        <div>
+            <Prohome/>
+        </div>
     </div>)
 }
 export default Home;

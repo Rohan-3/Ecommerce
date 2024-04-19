@@ -11,7 +11,7 @@ const Promen = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:2000/getData`)
+      .get(`http://localhost:5000/getData`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);
@@ -31,7 +31,7 @@ const Promen = () => {
         <p>Men Loading...</p>
       ) : (
         <div>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,300px)', justifyContent: 'space-evenly' }}>
             {menpro.map((temp) => (
               <ProCard
                 img={temp.img}

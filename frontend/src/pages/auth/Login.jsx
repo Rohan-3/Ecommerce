@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [user, setUser] = useState({
       email:"",
       password:""
     })
+    const nav = useNavigate();
 
     const handleUserInput = (e)=>{
 
@@ -24,7 +27,7 @@ const Login = () => {
         e.preventDefault();
         console.log(user);
   
-        const response = await fetch('http://localhost:2000/auth/login', {
+        const response = await fetch('http://localhost:5000/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -33,15 +36,22 @@ const Login = () => {
         });
   
         const responseData = await response.json();
-        if (!response.ok) {
-            alert('Response IS False');
-            console.log(response.ok);
-}else{
-    alert('Login Successful');
-        console.log('Login Response = ', responseData);
-        console.log(' Login TOken   =   ', responseData);
+        if (!response.ok)
+        {
+          alert('Response IS False');
+          console.log(response.ok);
 
-      }
+        }
+        else
+        {
+          alert('Login Successful');
+          console.log('Login Response = ', responseData);
+          console.log(' Login TOken   =   ', responseData.token);
+          Cookies.set('userToken', responseData.token, { expires: 1 });
+          Cookies.set('user', user.email, { expires: 1 });
+          nav("/");
+          window.location.reload();
+        }
     } catch (error) {
       console.log('Error Response ', error);
     }

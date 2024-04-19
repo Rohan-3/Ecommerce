@@ -11,7 +11,7 @@ const Prowomen = () => {
    
     
     useEffect(() => {
-        axios.get(`http://localhost:2000/getData`)
+        axios.get(`http://localhost:5000/getData`)
             .then((res) => {
                 setProducts(res.data);
                 setLoading(false);
@@ -36,7 +36,7 @@ setWomenpro(products.filter((temp)=>temp.Category.includes(categorie)))
             : 
             <div>
     
-                 <div style={{display:"flex",flexWrap:"wrap"}}>
+                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,300px)', justifyContent: 'space-evenly' }}>
                        
                        {
                         womenpro.map((temp)=><ProCard img={temp.img} ProductId={temp.ProductId} Brand={temp.Brand} Price={temp.Price}/>)

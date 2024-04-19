@@ -13,7 +13,7 @@ route.get('/getData', async (req, res) => {
   try {
     let data = await cs.find();
     res.send(data);
-    console.log(data);
+    // console.log(data);
   } catch (e) {
     res.send(e);
   }
@@ -31,7 +31,7 @@ route.get('/:id', async (req, res) => {
     const data = await cs.find({ ProductId: id });
     if (data.length > 0) {
       res.send(data);
-      console.log(data);
+      // console.log(data);
     } else {
       res.send('Invalid product id');
     }

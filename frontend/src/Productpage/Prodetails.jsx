@@ -23,7 +23,7 @@ const Prodetails=()=>
     
     
     useEffect(() => {
-        axios.get(`http://localhost:2000/${id}`)
+        axios.get(`http://localhost:5000/${id}`)
             .then((res) => {
                 setProducts(res.data);
                 setLoading(false);
@@ -69,7 +69,7 @@ const Prodetails=()=>
         : 
         <div className="prodetail-container">
 
-             {console.log(products)}
+             {/* {console.log(products)} */}
           
              {
                   <div className="slider-container">

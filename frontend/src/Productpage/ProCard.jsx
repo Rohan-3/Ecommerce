@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ProCard.css"
 import 'boxicons'
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
@@ -6,22 +6,21 @@ import 'boxicons'
 
 const ProCard=(props)=>
 {
+    const nav = useNavigate();
+
+    const handleNav = () =>
+    {
+        nav(`product/${props.ProductId}`)
+    }
     return(
-        <div className="Procard">
+        <div className="Procard" onClick={handleNav}>
          <img src={props.img[0]} style={{width:"200px",height:"250px"}} />
          <h4>ID-{props.ProductId}</h4>
          <h3>{props.Brand}</h3>
          <h4>Rs. {props.Price}</h4>
-         
-        <Link to={`product/${props.ProductId}`}> <button style={{marginRight:"50px"}}><box-icon name='show' animation='tada-hover' size='md' ></box-icon></button> </Link>
+        {/* <Link to={`product/${props.ProductId}`}> <button style={{marginRight:"50px"}}><box-icon name='show' animation='tada-hover' size='md' ></box-icon></button> </Link> */}
         <button><box-icon name='cart-add' type='solid' animation='tada-hover' size='md'  ></box-icon></button>
         
-         
-         
-
-
-
-
         </div>
 
 
