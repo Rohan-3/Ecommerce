@@ -3,18 +3,21 @@ import axios from 'axios';
 import ProCard from './ProCard';
 
 const Prohome = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+ 
+   
+    
+    useEffect(() => {
+        axios.get(`http://localhost:2000/getData`)
+            .then((res) => {
+                setProducts(res.data);
+                setLoading(false);
+            })
+            .catch((e) => console.log(e));
+    }, []);
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5000/getData`)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch((e) => console.log(e));
-  }, []);
+
 
   return (
     <div>

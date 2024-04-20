@@ -55,7 +55,7 @@ const clothingSchema = new mongoose.Schema({
   Description: {
     type: Array,
     require: true,
-  },
+  }
 });
 
 const cs = new mongoose.model('Clothings', clothingSchema);

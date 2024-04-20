@@ -20,10 +20,11 @@ const Prodetails=()=>
     const [selectedQuantity, setSelectedQuantity] = useState(1);
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
     const [isDesc, setIsDesc] = useState(false);
+    const [selectedSize,setSelectedSize] = useState("");
     
     
     useEffect(() => {
-        axios.get(`http://localhost:5000/${id}`)
+        axios.get(`http://localhost:5000/specificProduct/${id}`)
             .then((res) => {
                 setProducts(res.data);
                 setLoading(false);
@@ -59,7 +60,19 @@ const Prodetails=()=>
         setIsDesc(!isDesc);
       }
 
-      
+      const addToCart=(ProductId,img,Brand,Price,Qty,Size)=>
+    {
+        if(selectedSize!=="")
+        {
+          axios.post("http://localhost:5000/addCart",{ProductId,img,Brand,Price,Qty,Size})
+        .then((res)=>console.log(res.data))
+        .catch((e)=>console.log(e))
+    }
+        else
+        {
+          alert("Please select size")
+        }
+    }
 
 
     return(<div>
@@ -69,8 +82,6 @@ const Prodetails=()=>
         : 
         <div className="prodetail-container">
 
-             {/* {console.log(products)} */}
-          
              {
                   <div className="slider-container">
                 <Slider {...sliderSettings} className="custom-slider">
@@ -96,10 +107,10 @@ const Prodetails=()=>
              <h3 className="pr">PRICE: Rs.{products[0].Price}</h3>
              
 
-             <select id="size" >
+             <select id="size" onChange={(e)=>setSelectedSize(e.target.value)} >
           <option value="">CHOOSE SIZE</option>
           {products[0].Size.map((size, index) => (
-            <option key={index} value={size}>{size}</option>
+            <option key={index} value={size} >{size}</option>
           ))}
         </select>
         <div className="Prodetail-quantity">
@@ -112,7 +123,7 @@ const Prodetails=()=>
 
         
        <div>
-        <button className="btn">ADD TO CART </button>
+        <button className="btn" onClick={()=>addToCart(parseInt(id),products[0].img[0],products[0].Brand,products[0].Price,selectedQuantity,selectedSize)}>ADD TO CART </button>
         <button className="btn">BUY NOW</button>
        </div>
 

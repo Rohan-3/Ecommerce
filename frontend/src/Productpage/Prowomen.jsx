@@ -39,7 +39,7 @@ setWomenpro(products.filter((temp)=>temp.Category.includes(categorie)))
                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,300px)', justifyContent: 'space-evenly' }}>
                        
                        {
-                        womenpro.map((temp)=><ProCard img={temp.img} ProductId={temp.ProductId} Brand={temp.Brand} Price={temp.Price}/>)
+                        womenpro.map((temp)=><ProCard img={temp.img} ProductId={temp.ProductId} Brand={temp.Brand} Price={temp.Price} Size={temp.Size}/>)
                        }
 
                 
